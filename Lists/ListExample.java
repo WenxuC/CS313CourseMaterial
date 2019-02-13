@@ -37,7 +37,7 @@ class ListExample{
         System.out.println(list2);
 
         System.out.println("LinkedList 3:");
-        List<Integer> list3 = new LinkedList<>(list1); // Creates a LinkedList containing the same elements as list1
+        List<Integer> list3 = new LinkedList<>(list1);
         System.out.println(list3);
         
     }
@@ -55,27 +55,3 @@ class ListExample{
     }
 
 }
-
-/*
-        System.out.println("ArrayList 1:");
-        ArrayList<Integer> list1 = new ArrayList<>();
-        fill(list1);
-        System.out.println(list1);
-        Collections.sort(list1);
-        System.out.println(list1);
-
-        list1.add(99);
-        list1.set(0, 99);
-        System.out.println(list1);
-
-        System.out.println("ArrayList 2:");
-        List<Integer> list2 = new ArrayList<>();
-        fill(list2);
-        System.out.println(list2);
-        Collections.sort(list2);
-        System.out.println(list2);
-
-        list2.add(999);
-        list2.set(0, 999);
-        System.out.println(list2);
-*/

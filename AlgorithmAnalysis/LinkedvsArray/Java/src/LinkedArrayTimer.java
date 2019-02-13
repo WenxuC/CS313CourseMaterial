@@ -8,7 +8,6 @@ public class LinkedArrayTimer{
         start = System.currentTimeMillis();
         for (int i = 0; i < 1000000; ++i){
             linkedList.add(0,i);
-            if(i%1000000==0) System.out.print(i);
         }
            
         end = System.currentTimeMillis();
@@ -16,9 +15,8 @@ public class LinkedArrayTimer{
 
         List<Integer> arrayList = new ArrayList<>();
         start = System.currentTimeMillis();
-        for (int i = 0; i < 10000000; ++i){
+        for (int i = 0; i < 1000000; ++i){
             arrayList.add(0,i);
-            if(i%1000000==0) System.out.print(i);
         }
            
         end = System.currentTimeMillis();
