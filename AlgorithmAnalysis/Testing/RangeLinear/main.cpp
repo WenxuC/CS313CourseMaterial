@@ -15,7 +15,7 @@ void fill(vector<int> &list, int size){
 int rangeLinear(vector<int> & list){
     int hi = INT_MIN;
     int lo = INT_MAX;
-    for(int i = 1; i<=list.size(); i++){
+    for(int i = 0; i<list.size(); i++){
         hi = max(hi, list[i]);
         lo = min(lo, list[i]);
     }
@@ -31,5 +31,6 @@ int main (int argc, char**argv) {
     start = clock();
     rangeLinear(list);
     end = clock();
+    
     cout << (double)(end-start)/CLOCKS_PER_SEC;
 }

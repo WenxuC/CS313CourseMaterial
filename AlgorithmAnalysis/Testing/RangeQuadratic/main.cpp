@@ -6,7 +6,7 @@
 using namespace std;
 
 void fill(vector<int> &list, int size){
-    for(int i = 1; i<=size; i++){
+    for(int i = 0; i<size; i++){
         int num = rand()%size+1;
         list.push_back(num);
     }

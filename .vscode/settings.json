@@ -4,5 +4,5 @@
         "iostream": "cpp",
         "vector": "cpp"
     },
-    "python.pythonPath": "C:\\Python27\\python.exe"
+    "python.pythonPath": "/usr/bin/python2.7"
 }
