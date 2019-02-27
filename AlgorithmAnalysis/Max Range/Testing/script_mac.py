@@ -1,6 +1,8 @@
 import os, subprocess, xlwt
 from xlwt import Workbook
 
+wb = Workbook()
+
 def fillSize(size):
     sheet.write(0, 0, 'Size')
     row = 1
@@ -21,25 +23,24 @@ def run(file_path, exe_file, col, size):
         output = subprocess.Popen(exe, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=True)
         stdout= output.communicate()[0]
         sheet.write(row, col, stdout)
+        wb.save('/Users/Alex/Documents/CS313/AlgorithmAnalysis/Testing/runtime result.xls')
         row += 1
         i *= 2
     os.chdir('..')
 
-wb = Workbook()
-
 sheet = wb.add_sheet('Constant v. Linear')
-fillSize(2000000000)
+fillSize(1000000000)
 print('constant')
-run('constant', './a.out ', 1, 2000000000)
+run('constant', './a.out ', 1, 1000000000)
+
 print('linear')
-run('linear', './a.out ', 2, 2000000000)
+run('linear', './a.out ', 2, 1000000000)
+
 
 sheet = wb.add_sheet('Max Range')
-fillSize(2000000000)
+fillSize(1000000000)
 print('Rlinear')
-run('RangeLinear', './a.out ', 3, 2000000000)
+run('RangeLinear', './a.out ', 1, 1000000000)
+
 print('RQuad')
-run('RangeQuadratic', './a.out ', 4, 2000000)
-
-
-wb.save('runtime results.xls')
+run('RangeQuadratic', './a.out ', 2, 2000000)
