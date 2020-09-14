@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "list": "cpp",
-        "iostream": "cpp",
-        "vector": "cpp"
-    },
-    "python.pythonPath": "/usr/bin/python2.7"
-}

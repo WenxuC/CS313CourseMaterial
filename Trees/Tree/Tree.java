@@ -71,6 +71,12 @@ public class Tree {
       return answer;
    }
 
+   public ArrayList<TNode> postOrder() {
+      ArrayList<TNode> answer = new ArrayList<TNode>();
+      postOrder(root(), answer);
+      return answer;
+   }
+
    public void preOrder(TNode node, ArrayList<TNode> nodeOrder) {
       if (node == null)
          return;
@@ -80,12 +86,6 @@ public class Tree {
          TNode m = x.next();
          preOrder(m, nodeOrder);
       }
-   }
-
-   public ArrayList<TNode> postOrder() {
-      ArrayList<TNode> answer = new ArrayList<TNode>();
-      postOrder(root(), answer);
-      return answer;
    }
 
    public void postOrder(TNode node, ArrayList<TNode> nodeOrder) {

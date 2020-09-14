@@ -2,24 +2,9 @@ import java.util.*;
 import java.util.ArrayList;
 class SortingTime{
     public static void main(String args[]){
-        int size = (args.length == 0)? 20: Integer.parseInt(args[0]);
+        int size = (args.length == 0)? 400000: Integer.parseInt(args[0]);
         long start, end;
         ArrayList<Integer> list = new ArrayList<>();
-        
-        fill(list, size);
-        System.out.println("Insertion Sort:");
-        start = System.currentTimeMillis();
-        SortAlgorithms.insertionSort(list);
-        end = System.currentTimeMillis();
-        System.out.println((end - start));
-
-        list = new ArrayList<>();
-        fill(list, size);
-        System.out.println("Bubble Sort:");
-        start = System.currentTimeMillis();
-        SortAlgorithms.bubbleSort(list);
-        end = System.currentTimeMillis();
-        System.out.println((end - start));
 
         list = new ArrayList<>();
         fill(list, size);
@@ -34,6 +19,21 @@ class SortingTime{
         System.out.println("QuickSort Sort:");
         start = System.currentTimeMillis();
         SortAlgorithms.quickSort(list, 0, size-1);
+        end = System.currentTimeMillis();
+        System.out.println((end - start));
+        
+        fill(list, size);
+        System.out.println("Insertion Sort:");
+        start = System.currentTimeMillis();
+        SortAlgorithms.insertionSort(list);
+        end = System.currentTimeMillis();
+        System.out.println((end - start));
+
+        list = new ArrayList<>();
+        fill(list, size);
+        System.out.println("Bubble Sort:");
+        start = System.currentTimeMillis();
+        SortAlgorithms.bubbleSort(list);
         end = System.currentTimeMillis();
         System.out.println((end - start));
     }

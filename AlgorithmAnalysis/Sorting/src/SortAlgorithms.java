@@ -2,11 +2,13 @@ import java.util.List;
 class SortAlgorithms{
     public static void bubbleSort(List<Integer> unsortedList){
         int n = unsortedList.size(); 
-        for (int i = 0; i < n-1; i++) 
-            for (int j = 0; j < n-i-1; j++)
+        for (int i = 0; i < n-1; i++) {
+            for (int j = 0; j < n-i-1; j++){
                 if(unsortedList.get(j) > unsortedList.get(j+1)){
                     swap(unsortedList, j+1, j);
                 }
+            }
+        }
     }
 
     public static void insertionSort(List<Integer> unsortedList){
